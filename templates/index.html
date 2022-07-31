@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Overall Rating</title>
+</head>
+<body>
+    <div style="color: orangered;">
+        <h1>Player Overall Rating</h1>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <input type="text" name="potential" id="po" placeholder="potential">
+            <br>
+            <input type="text" name="heading_accuracy" id="he" placeholder="heading_accuracy">
+            <br>
+            <input type="text" name="ball_control" id="bal" placeholder="ball_control">
+            <br>
+            <input type="text" name="reactions" id="rec" placeholder="reactions">
+            <br>
+            <input type="text" name="strength" id="strn" placeholder="strength">
+            <br>
+            <input type="text" name="interception" id="intr" placeholder="interception">
+            <br>
+            <input type="text" name="marking" id="ma" placeholder="marking">
+            <br>
+            <input type="text" name="sliding_tackle" id="stk" placeholder="sliding_tackle">
+            <br>
+            <input type="text" name="gk_diving" id="gkd" placeholder="gk_diving">
+            <br>
+            <input type="text" name="gk_handling" id="gkh" placeholder="gk_handling">
+            <br>
+            <hr>
+            <button type="submit" id="sub">
+                <b>
+                    Predict Overall Rating
+                </b>
+                </button>
+        </form>
+
+    </div>
+    <br><br>
+    <b>
+        <i>
+            Overall Rating : {{predection_eval}}
+        </i>
+    </b>
+    <hr>
+    <a href="https://github.com/vijit200/scoccer" target="_main">
+        <img src="https://www.bing.com/th?id=OIP.NGIDdVP6vw9ue_D-mrEVFQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="vijit_github" width="40px">
+    </a>
+</body>
+</html>
